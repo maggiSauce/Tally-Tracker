@@ -19,6 +19,7 @@ def btnUpClicked():
     global COUNTER 
     COUNTER = COUNTER + 1
     updateTally()
+
 def btnDownClicked():
     global COUNTER 
     COUNTER -= 1
@@ -48,7 +49,6 @@ resetButton.grid(column=1, row=5)
 
 exitButton = Button(window, text='Exit', command = btnExitClicked)
 exitButton.grid(column=2, row=5)
-
 
 # scanner that scans to see what is happening in the GUI
 window.mainloop()
