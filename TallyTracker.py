@@ -16,14 +16,21 @@ def btnExitClicked():
     window.destroy()
 
 def btnUpClicked():
-    counter = counter + 1
-    print(COUNTER)
-
+    global COUNTER 
+    COUNTER = COUNTER + 1
+    updateTally()
 def btnDownClicked():
+    global COUNTER 
     COUNTER -= 1
+    updateTally()
 
 def btnResetClicked():
+    global COUNTER
     COUNTER = 0
+    updateTally()
+
+def updateTally():
+    tally.config(text=str(COUNTER))
 
 #  Create a label
 label = Label(window, text='Tally: ')
